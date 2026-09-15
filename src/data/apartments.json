@@ -11,9 +11,12 @@
     "billsIncluded": false,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Cinema room", "Rooftop terrace", "Study lounges", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "Closest studio to MBS — literally across the road from the Leicester St campus. Premium price for a premium commute.",
+    "vibeZh": "离商学院最近的单间——Leicester 街校区就在马路对面。贵在通勤时间上。",
     "previouslyStayed": false,
     "rating": 4.5,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "baseline",
+    "snapshotDate": "2026-09-15"
   },
   {
     "id": "yugo-university-square",
@@ -27,9 +30,12 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Courtyard", "Games room", "Study lounges", "Laundry", "Wi-Fi"],
     "vibe": "Right on University Square, walkable to both MBS and the Parkville campus. Bills packaged in.",
+    "vibeZh": "就在 University Square 边上，去商学院和 Parkville 校区都是步行距离。账单已打包进租金。",
     "previouslyStayed": false,
     "rating": 4.3,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "baseline",
+    "snapshotDate": "2026-09-15"
   },
   {
     "id": "scape-lincoln-college",
@@ -43,9 +49,11 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Courtyard garden", "Study lounges", "Cinema room", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "Purpose-built Scape tower on Cardigan St with an internal courtyard. Strong study facilities, ~7 min walk to MBS.",
+    "vibeZh": "Cardigan 街上的 Scape 自有楼，中庭花园，自习设施齐全，步行到商学院约 7 分钟。",
     "previouslyStayed": false,
     "rating": 4.4,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "live"
   },
   {
     "id": "student-village-melbourne",
@@ -59,9 +67,12 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Pool", "Study lounges", "Laundry", "Wi-Fi", "On-site team"],
     "vibe": "Best value of the Carlton cluster. Older building but a pool, a gym, and the cheapest studio rent this close to MBS.",
+    "vibeZh": "Carlton 一片里性价比最高的。楼略旧，但有泳池和健身房，是离商学院这么近的房子里租金最低的。",
     "previouslyStayed": false,
     "rating": 4.0,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "baseline",
+    "snapshotDate": "2026-09-15"
   },
   {
     "id": "scape-cornell-place",
@@ -75,9 +86,11 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Rooftop terrace", "Study lounges", "Games room", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "Modern Scape build on Swanston St — tram at the door if the 11-minute walk up Grattan St isn't appealing.",
+    "vibeZh": "Swanston 街上的新 Scape 楼——不想沿 Grattan 街走 11 分钟的话，门口就有电车。",
     "previouslyStayed": false,
     "rating": 4.3,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "live"
   },
   {
     "id": "unilodge-on-swanston",
@@ -91,9 +104,12 @@
     "billsIncluded": false,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Study lounges", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "Workhorse UniLodge building on the Carlton stretch of Swanston St. Mid-range rent, no-fuss fitout.",
+    "vibeZh": "Swanston 街 Carlton 段上中规中矩的 UniLodge 楼。租金中等，装修够用不讲究。",
     "previouslyStayed": false,
     "rating": 4.1,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "baseline",
+    "snapshotDate": "2026-09-15"
   },
   {
     "id": "unilodge-melbourne-city",
@@ -107,9 +123,12 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Study lounges", "Common kitchen", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "You've lived here — big gym, reliable management, and a straight tram ride up Elizabeth St to MBS. 18 min on foot in good weather.",
+    "vibeZh": "你住过这里——健身房大、管理靠谱，沿 Elizabeth 街一趟电车直达商学院。天气好时步行 18 分钟。",
     "previouslyStayed": true,
     "rating": 4.2,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "baseline",
+    "snapshotDate": "2026-09-15"
   },
   {
     "id": "scape-melbourne-central",
@@ -123,9 +142,11 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Cinema room", "Rooftop terrace", "Study lounges", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "CBD convenience with Scape polish — tram on Elizabeth/La Trobe, or a 14-minute walk when you skip the gym.",
+    "vibeZh": "CBD 的便利加上 Scape 的配套——Elizabeth／La Trobe 有电车，不想去健身房时就步行 14 分钟。",
     "previouslyStayed": false,
     "rating": 4.4,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "live"
   },
   {
     "id": "iglu-melbourne-central",
@@ -139,9 +160,12 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Rooftop terrace", "Study lounges", "Games room", "Laundry", "Wi-Fi"],
     "vibe": "Well-run Iglu property with a strong community program and rooftop. Same commute as Scape Melbourne Central.",
+    "vibeZh": "Iglu 运营得不错的一栋，社群活动多，有屋顶露台。通勤条件和 Scape Melbourne Central 一样。",
     "previouslyStayed": false,
     "rating": 4.4,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "baseline",
+    "snapshotDate": "2026-09-15"
   },
   {
     "id": "scape-swanston",
@@ -155,9 +179,11 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Cinema room", "Study lounges", "Common areas", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "Smack in the middle of the Swanston St student strip — libraries, food, and the tram all within 100 m.",
+    "vibeZh": "就在 Swanston 街学生街正中间——图书馆、吃饭、电车都在 100 米内。",
     "previouslyStayed": false,
     "rating": 4.2,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "live"
   },
   {
     "id": "unilodge-royal-melbourne",
@@ -171,9 +197,12 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Study lounges", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "Cheapest studio in the set, tied to the Royal Melbourne Hospital precinct. Long walk to MBS — tram essentially required.",
+    "vibeZh": "这批里最便宜的单间，挨着皇家墨尔本医院片区。走到商学院太远——基本必须坐电车。",
     "previouslyStayed": false,
     "rating": 3.9,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "baseline",
+    "snapshotDate": "2026-09-15"
   },
   {
     "id": "scape-peel-street",
@@ -187,8 +216,10 @@
     "billsIncluded": true,
     "facilities": ["Private bathroom", "Kitchenette", "Gym", "Rooftop terrace", "Study lounges", "Cinema room", "Laundry", "Wi-Fi", "24/7 support"],
     "vibe": "Newer Scape building near Queen Victoria Market. Good amenity stack, ~20 min walk or a short tram down Peel/Elizabeth.",
+    "vibeZh": "维多利亚女王市场附近较新的 Scape 楼。设施齐全，步行约 20 分钟，或沿 Peel／Elizabeth 坐一小段电车。",
     "previouslyStayed": false,
     "rating": 4.3,
-    "availability": "Semester 1 2027"
+    "availability": "Semester 1 2027",
+    "priceSource": "live"
   }
 ]

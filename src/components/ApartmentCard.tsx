@@ -1,10 +1,14 @@
-import type { Apartment } from "@/types/apartment";
+"use client";
+
+import { useI18n } from "@/i18n/context";
+import type { PricedApartment } from "@/types/apartment";
 
 type ApartmentCardProps = {
-  apartment: Apartment;
+  apartment: PricedApartment;
 };
 
 export default function ApartmentCard({ apartment }: ApartmentCardProps) {
+  const { locale, t } = useI18n();
   const {
     name,
     operator,
@@ -12,13 +16,16 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
     suburb,
     roomType,
     walkMinutes,
-    weeklyRent,
     billsIncluded,
     facilities,
     vibe,
+    vibeZh,
     previouslyStayed,
     rating,
     availability,
+    effectiveRent,
+    isLive,
+    live,
   } = apartment;
 
   const walkTone =
@@ -27,6 +34,8 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
       : walkMinutes <= 10
         ? "bg-sky-50 text-sky-700 ring-sky-200"
         : "bg-amber-50 text-amber-700 ring-amber-200";
+
+  const blurb = locale === "zh" && vibeZh ? vibeZh : vibe;
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-lg">
@@ -38,7 +47,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
             </h2>
             {previouslyStayed && (
               <span className="rounded-full bg-violet-100 px-2.5 py-0.5 text-xs font-semibold text-violet-700 ring-1 ring-violet-200">
-                You lived here
+                {t.youLivedHere}
               </span>
             )}
           </div>
@@ -48,11 +57,27 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
         </div>
         <div className="shrink-0 text-right">
           <p className="text-2xl font-bold leading-none tracking-tight text-slate-900">
-            ${weeklyRent}
+            ${effectiveRent}
           </p>
           <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
-            per week
+            {t.perWeek}
           </p>
+          <span
+            title={isLive ? t.liveTitle : t.baselineTitle}
+            className={`mt-1.5 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ${
+              isLive
+                ? "bg-emerald-50 text-emerald-700 ring-emerald-200"
+                : "bg-slate-100 text-slate-600 ring-slate-200"
+            }`}
+          >
+            {isLive && (
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-70" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-600" />
+              </span>
+            )}
+            {isLive ? t.live : t.baseline}
+          </span>
         </div>
       </div>
 
@@ -76,7 +101,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
               <path d="m13 9 3 3 3 1" />
               <path d="M9 21h6" />
             </svg>
-            {walkMinutes} min walk to MBS
+            {t.minWalkToMbs(walkMinutes)}
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 ring-1 ring-slate-200">
             {roomType}
@@ -88,7 +113,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
                 : "bg-slate-50 text-slate-600 ring-slate-200"
             }`}
           >
-            {billsIncluded ? "Bills included" : "Bills extra"}
+            {billsIncluded ? t.billsIncluded : t.billsExtra}
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600 ring-1 ring-slate-200">
             <svg
@@ -103,11 +128,11 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
           </span>
         </div>
 
-        <p className="text-sm leading-relaxed text-slate-600">{vibe}</p>
+        <p className="text-sm leading-relaxed text-slate-600">{blurb}</p>
 
         <div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-            Facilities
+            {t.facilities}
           </p>
           <ul className="flex flex-wrap gap-1.5">
             {facilities.map((facility) => (
@@ -125,6 +150,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
       <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 px-5 py-3 text-xs text-slate-500">
         <span>
           {suburb} · {availability}
+          {isLive && live?.semester ? ` · ${live.semester}` : ""}
         </span>
         <a
           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -134,7 +160,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
           rel="noopener noreferrer"
           className="font-semibold text-slate-700 underline-offset-2 hover:text-slate-900 hover:underline"
         >
-          View location →
+          {t.viewLocation}
         </a>
       </div>
     </article>
