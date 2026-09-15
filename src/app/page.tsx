@@ -12,6 +12,7 @@ const apartments = apartmentsData as Apartment[];
 
 const RENT_MIN = 400;
 const RENT_MAX = 750;
+const WALK_MIN = 2;
 const WALK_MAX = 25;
 const STEP = 10;
 
@@ -152,7 +153,7 @@ export default function Home() {
               <input
                 id="max-walk"
                 type="range"
-                min={5}
+                min={WALK_MIN}
                 max={WALK_MAX}
                 step={1}
                 value={maxWalk}
@@ -160,7 +161,9 @@ export default function Home() {
                 className="mt-3 w-full accent-sky-600"
               />
               <div className="mt-1 flex justify-between text-xs text-slate-500">
-                <span>5 {t.minShort}</span>
+                <span>
+                  {WALK_MIN} {t.minShort}
+                </span>
                 <span>
                   {WALK_MAX} {t.minShort}
                 </span>

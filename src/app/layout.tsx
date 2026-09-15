@@ -14,9 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UniFlat 找房：墨尔本商学院 | UniFlat Finder: Melbourne Business School",
+  title:
+    "UniFlat 找房：墨尔本大学商学院 | UniFlat Finder: University of Melbourne (FBE)",
   description:
-    "墨尔本商学院周边单人套间实时比价——步行时间、周租金、账单是否包含，部分公寓价格实时抓取。/ Single-occupancy studios near Melbourne Business School (200 Leicester St, Carlton) with live weekly rents.",
+    "墨尔本大学商学院（FBE）周边单人套间实时比价——上课地点 The Spot（Carlton 区 Berkeley 街 198 号），步行时间、周租金、账单是否包含，部分公寓价格实时抓取。/ Single-occupancy studios near the University of Melbourne Faculty of Business and Economics (The Spot, 198 Berkeley St, Carlton) with live weekly rents.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

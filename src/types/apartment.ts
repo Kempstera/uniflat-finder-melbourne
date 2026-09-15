@@ -5,7 +5,11 @@ export type Apartment = {
   address: string;
   suburb: string;
   roomType: string;
-  /** Walking time to Melbourne Business School (200 Leicester St, Carlton), in minutes. */
+  /**
+   * Walking time in minutes to the University of Melbourne Faculty of Business
+   * and Economics — The Spot, 198 Berkeley St, Carlton (OSRM foot routing from
+   * the building's OSM address point).
+   */
   walkMinutes: number;
   /**
    * Baseline weekly rent in AUD from the curated snapshot. Used until (and

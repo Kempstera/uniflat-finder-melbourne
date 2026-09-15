@@ -26,7 +26,7 @@ type Dict = {
   facilities: string;
   viewLocation: string;
   youLivedHere: string;
-  minWalkToMbs: (m: number) => string;
+  minWalkToSpot: (m: number) => string;
   billsIncluded: string;
   billsExtra: string;
   live: string;
@@ -48,11 +48,11 @@ type Dict = {
 export const dict: Record<Locale, Dict> = {
   en: {
     kicker: "Melbourne · Studio search",
-    siteTitle: "UniFlat Finder: Melbourne Business School",
+    siteTitle: "UniFlat Finder: University of Melbourne (FBE)",
     intro:
-      "Single-occupancy studios within walking distance of Melbourne Business School (200 Leicester St, Carlton). Walking times are on foot to the MBS campus — tram options are noted where the walk gets long.",
+      "Single-occupancy studios within walking distance of the University of Melbourne's Faculty of Business and Economics (FBE). Walking times are routed on foot to The Spot, 198 Berkeley St, Carlton — tram options are noted where the walk gets long.",
     maxRent: "Max weekly rent",
-    maxWalk: "Max walk to MBS",
+    maxWalk: "Max walk to The Spot",
     billsOnly: "Bills included only",
     reset: "Reset filters",
     perWeekShort: (v) => `$${v}/wk`,
@@ -66,7 +66,7 @@ export const dict: Record<Locale, Dict> = {
     facilities: "Facilities",
     viewLocation: "View location →",
     youLivedHere: "You lived here",
-    minWalkToMbs: (m) => `${m} min walk to MBS`,
+    minWalkToSpot: (m) => `${m} min walk to The Spot`,
     billsIncluded: "Bills included",
     billsExtra: "Bills extra",
     live: "Live",
@@ -88,11 +88,11 @@ export const dict: Record<Locale, Dict> = {
   },
   zh: {
     kicker: "墨尔本 · 单间搜索",
-    siteTitle: "UniFlat 找房：墨尔本商学院",
+    siteTitle: "UniFlat 找房：墨尔本大学商学院",
     intro:
-      "步行可达墨尔本商学院（Carlton 区 Leicester 街 200 号）的单人套间。步行时间按实际走路计算，路程较远时会标注电车方案。",
+      "步行可达墨尔本大学商学院（FBE）的单人套间。上课地点为 The Spot 教学楼（Carlton 区 Berkeley 街 198 号），步行时间按实际路网计算，路程较远时会标注电车方案。",
     maxRent: "每周租金上限",
-    maxWalk: "步行到商学院上限",
+    maxWalk: "步行到 The Spot 上限",
     billsOnly: "仅看含账单",
     reset: "重置筛选",
     perWeekShort: (v) => `$${v}/周`,
@@ -106,7 +106,7 @@ export const dict: Record<Locale, Dict> = {
     facilities: "设施",
     viewLocation: "查看位置 →",
     youLivedHere: "你住过这里",
-    minWalkToMbs: (m) => `步行 ${m} 分钟到商学院`,
+    minWalkToSpot: (m) => `步行 ${m} 分钟到 The Spot`,
     billsIncluded: "含账单",
     billsExtra: "账单另计",
     live: "实时",

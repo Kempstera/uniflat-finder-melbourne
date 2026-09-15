@@ -101,7 +101,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
               <path d="m13 9 3 3 3 1" />
               <path d="M9 21h6" />
             </svg>
-            {t.minWalkToMbs(walkMinutes)}
+            {t.minWalkToSpot(walkMinutes)}
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 ring-1 ring-slate-200">
             {roomType}
