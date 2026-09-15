@@ -1,3 +1,5 @@
+import type { HousingType } from "@/types/apartment";
+
 export type Locale = "en" | "zh";
 
 export const LOCALES: Locale[] = ["zh", "en"];
@@ -43,6 +45,19 @@ type Dict = {
   perWeek: string;
   langSwitchLabel: string;
   liveSummary: (live: number, total: number) => string;
+  housingTypeLabel: string;
+  housingTypeAll: string;
+  walkLabel: string;
+  walkAny: string;
+  walkOption: (m: number) => string;
+  searchButton: string;
+  searchHint: string;
+  resultsHeading: (n: number) => string;
+  resultsLead: string;
+  refineTitle: string;
+  apply: string;
+  newSearch: string;
+  noResultsCta: string;
 };
 
 export const dict: Record<Locale, Dict> = {
@@ -85,6 +100,21 @@ export const dict: Record<Locale, Dict> = {
     perWeek: "per week",
     langSwitchLabel: "Language",
     liveSummary: (live, total) => `${live} of ${total} prices live right now`,
+    housingTypeLabel: "Housing type",
+    housingTypeAll: "Any type",
+    walkLabel: "Walk to The Spot",
+    walkAny: "Any",
+    walkOption: (m) => `≤ ${m} min`,
+    searchButton: "Search",
+    searchHint:
+      "Takes you to the results page with these filters already applied.",
+    resultsHeading: (n) => `${n} ${n === 1 ? "place" : "places"}`,
+    resultsLead:
+      "Ranked by walking time to The Spot, then by weekly rent. Live prices refresh on every visit.",
+    refineTitle: "Refine",
+    apply: "Apply",
+    newSearch: "New search",
+    noResultsCta: "Loosen the filters above, or start a new search.",
   },
   zh: {
     kicker: "墨尔本 · 单间搜索",
@@ -124,5 +154,39 @@ export const dict: Record<Locale, Dict> = {
     perWeek: "每周",
     langSwitchLabel: "语言",
     liveSummary: (live, total) => `${total} 个价格中有 ${live} 个实时获取`,
+    housingTypeLabel: "房源类型",
+    housingTypeAll: "不限",
+    walkLabel: "步行到 The Spot",
+    walkAny: "不限",
+    walkOption: (m) => `≤ ${m} 分钟`,
+    searchButton: "开始搜索",
+    searchHint: "点击后会带着这些筛选条件跳到结果页。",
+    resultsHeading: (n) => `${n} 个房源`,
+    resultsLead:
+      "按步行到 The Spot 的时间排序，时间相同看租金。实时价格每次访问都会刷新。",
+    refineTitle: "修改条件",
+    apply: "应用",
+    newSearch: "重新搜索",
+    noResultsCta: "放宽上面的筛选条件，或重新搜索。",
   },
+};
+
+/** Full label for a housing type, e.g. on a result card badge. */
+export const housingTypeLabels: Record<Locale, Record<HousingType, string>> = {
+  en: {
+    student: "Student accommodation",
+    university: "University accommodation",
+    private: "Private rental (1b1b)",
+  },
+  zh: {
+    student: "学生公寓",
+    university: "墨大校内宿舍",
+    private: "社会房源（1b1b）",
+  },
+};
+
+/** Short label used inside filter chips and the refine bar. */
+export const housingTypeShort: Record<Locale, Record<HousingType, string>> = {
+  en: { student: "Student", university: "Uni hall", private: "Private" },
+  zh: { student: "学生公寓", university: "校内宿舍", private: "社会房源" },
 };

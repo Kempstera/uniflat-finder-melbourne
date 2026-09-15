@@ -1,3 +1,21 @@
+/**
+ * What kind of listing this is. Drives the housing-type filter on the search
+ * page and the badge on every result card.
+ *
+ * - "student"    purpose-built student accommodation run by a commercial
+ *                 operator (Scape, UniLodge, Iglu, Yugo, Journal, ...)
+ * - "university" halls and apartments owned and allocated by the University
+ *                 of Melbourne itself (Little Hall, Lisa Bellear House, ...)
+ * - "private"    ordinary rental stock on the open market (1b1b apartments)
+ */
+export type HousingType = "student" | "university" | "private";
+
+export const HOUSING_TYPES: HousingType[] = [
+  "student",
+  "university",
+  "private",
+];
+
 export type Apartment = {
   id: string;
   name: string;
@@ -5,6 +23,7 @@ export type Apartment = {
   address: string;
   suburb: string;
   roomType: string;
+  housingType: HousingType;
   /**
    * Walking time in minutes to the University of Melbourne Faculty of Business
    * and Economics — The Spot, 198 Berkeley St, Carlton (OSRM foot routing from

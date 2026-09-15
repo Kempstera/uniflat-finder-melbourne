@@ -1,10 +1,18 @@
 "use client";
 
 import { useI18n } from "@/i18n/context";
+import { housingTypeLabels } from "@/i18n/dictionary";
 import type { PricedApartment } from "@/types/apartment";
 
 type ApartmentCardProps = {
   apartment: PricedApartment;
+};
+
+/** Colour per housing type, so the badge reads at a glance. */
+const TYPE_TONE: Record<string, string> = {
+  student: "bg-indigo-50 text-indigo-700 ring-indigo-200",
+  university: "bg-violet-50 text-violet-700 ring-violet-200",
+  private: "bg-stone-100 text-stone-700 ring-stone-300",
 };
 
 export default function ApartmentCard({ apartment }: ApartmentCardProps) {
@@ -15,6 +23,7 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
     address,
     suburb,
     roomType,
+    housingType,
     walkMinutes,
     billsIncluded,
     facilities,
@@ -83,6 +92,13 @@ export default function ApartmentCard({ apartment }: ApartmentCardProps) {
 
       <div className="flex flex-1 flex-col gap-4 px-5 py-4">
         <div className="flex flex-wrap items-center gap-2">
+          <span
+            className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ring-1 ${
+              TYPE_TONE[housingType] ?? "bg-slate-100 text-slate-700 ring-slate-200"
+            }`}
+          >
+            {housingTypeLabels[locale][housingType]}
+          </span>
           <span
             className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold ring-1 ${walkTone}`}
           >
